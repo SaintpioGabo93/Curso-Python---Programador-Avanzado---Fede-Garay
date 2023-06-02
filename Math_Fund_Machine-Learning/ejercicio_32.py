@@ -1,0 +1,17 @@
+import torch
+
+B = torch.tensor([[2,0,-1],[-2,3,1],[0,4,-1]])
+u_1 = torch.tensor([[2,5,-3]])
+u_2 = torch.tensor([[0,-4,6]])
+U = torch.tensor([[2,5,-3],[0,-4,6]])
+ident = torch.tensor([[1,0,0],[0,1,0],[0,0,1]])
+print(B)
+print(u_1)
+print(u_2)
+print(ident)
+print(torch.matmul(ident,u_1.T))
+print(torch.matmul(B,u_1.T))
+print(torch.matmul(ident,u_2.T))
+print(torch.matmul(B,u_2.T))
+print(torch.matmul(ident,U.T))
+print(torch.matmul(B,U.T))
